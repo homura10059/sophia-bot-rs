@@ -30,3 +30,5 @@ Cargo.lock
 
 #/target
 #/Cargo.lock
+
+Secrets.toml
