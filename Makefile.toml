@@ -10,12 +10,8 @@ workspace = false
 command = "cargo"
 args = ["shuttle", "run"]
 
-[tasks.deploy_local]
-description = "deploy binary file for "
+[tasks.deploy_prod]
+description = "Build"
 workspace = false
-script = ['''
-#!/usr/bin/env bash
-rm -f ~/bin/tsundoku-accelerator/backend-cli
-cp -p ./target/release/backend-cli ~/bin/tsundoku-accelerator/
-''']
-dependencies = ["compile_release"]
+command = "cargo"
+args = ["shuttle", "deploy"]
